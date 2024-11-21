@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="stripe">
+            <h1 class="title">{{title1}}</h1>
+            <div class="numBar">
+                <h1>Cookies: {{Math.round(cookies)}}</h1>
+                <h1>CPS: {{cps.toFixed(1)}}</h1>
+                <h3>Clickers: {{clickers}}</h3>
+                <h3>Grandmas: {{grandmas}}</h3>
+                <h3>Farms: {{farms}}</h3>
+            </div>
+            <button class="mainBtn" v-on:click = "addCookies(tapMoney)"><h1 style="color: burlywood;">Bake</h1></button>
+            
+            <div v-if="showBox" class="grid-container" >
+                <div class="grid-item">
+                    <p>Clicker: {{Math.round(clickerPrice)}}</p>
+                    <button @click="buyClicker">Buy</button>
+                </div>
+                <div class="grid-item">
+                    <p>Grandma: {{Math.round(granPrice)}}</p>
+                    <button @click="buyGrandma">Buy</button>
+                </div>
+                <div class="grid-item">
+                    <p>Farm: {{Math.round(farmPrice)}}</p>
+                    <button @click="buyFarm">Buy</button>
+                </div>
+            </div>
+            <div>
+                <button @click="toggleShowBox">Toggle Shop</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
