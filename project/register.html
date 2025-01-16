@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div id="Main">
+        <section class="header-parent">
+            <div class="header">
+                <div class="header-left"><h2>ROGOR.GE</h3></div>
+                <nav class="nav">
+                    <ul class="nav-items">
+                        <li class="nav__item" ><a href="index.html" data-key="navMain">Main</a></li>
+                        <li class="nav__item" data-key="navGeneral">General information</li>
+                        <li class="nav__item" data-key="navContact">Contact us</li>
+                        <li class="nav__item" ><a href="login.html" data-key="navLogin">Login</a></li>
+                        <li class="nav__item" ><a href="register.html" data-key="navRegister">Register</a></li>
+                        <li class="nav__item"><button id="lang-en">ENG</button></li>
+                        <li class="nav__item"><button id="lang-ka">GEO</button></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+        <form class="register-form" id="registerForm">
+            <h1 data-key="register">Register</h1>
+            <div class="form-group">
+                <label for="firstName" data-key="labelFirstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName" data-key="labelLastName">Last Name</label>
+                <input type="text" id="country" name="country" required>
+            </div>
+            <div class="form-group" onsubmit="emailVerification(); return false;">
+                <label for="email" data-key="labelEmail">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="username" data-key="labelcity">Username</label>
+                <input type="text" id="city" name="city" required>
+            </div>
+            <div class="form-group">
+                <label for="password" data-key="labelPassword">Password</label>
+                <input type="password" id="password" name="password" oninput="checkPasswordStrength()" required>
+                
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword" data-key="labelConfirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+            </div>
+            <div class="form-group">
+                <label for="phone" data-key="labelPhone">Phone Number</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            <div class="form-group">
+                <label for="birthDate" data-key="labelBirthDate">Date of Birth</label>
+                <input type="date" id="birthDate" name="birthDate" required>
+            </div>
+            <p id="password-strength" data-key="passwordStrength">Password strength: N/A</p>
+            <button type="submit" class="submit-btn" data-key="submitButton" onclick="finalVerification()">Submit</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <section class="header-parent">
+        <div class="header">
+            <div class="header-left"><h2>ROGOR.GE</h3></div>
+            <nav class="nav">
+                <ul class="nav-items">
+                    <li class="nav__item" ><a href="index.html" data-key="navMain">Main</a></li>
+                    <li class="nav__item" data-key="navGeneral">General information</li>
+                    <li class="nav__item" data-key="navContact">Contact us</li>
+                    <li class="nav__item" ><a href="login.html" data-key="navLogin">Login</a></li>
+                    <li class="nav__item" ><a href="register.html" data-key="navRegister">Register</a></li>
+                    <li class="nav__item"><button id="lang-en">ENG</button></li>
+                    <li class="nav__item"><button id="lang-ka">GEO</button></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+    <section class="login-container">
+        <form class="login-form">
+            <h1 style="color: green;" data-key="navLogin">Login</h1>
+            <label for="username" data-key="labelUsername">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            <label for="password" data-key="labelPassword">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            <button class="login-btn" data-key="navLogin">Login</button>
+        </form>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
